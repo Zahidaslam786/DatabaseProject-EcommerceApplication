@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{82CBC583-D953-4C2F-8DEF-0253BB90CF4F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DB_LAB_PROJECT</RootNamespace>
+    <AssemblyName>DB LAB PROJECT</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.23.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.23.6.1\lib\net472\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.6.0.1\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Formats.Asn1, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Formats.Asn1.8.0.1\lib\net462\System.Formats.Asn1.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=8.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.8.0.5\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProduct.Designer.cs">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFeedback.Designer.cs">
+      <DependentUpon>AdminFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BabyKidsToys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BabyKidsToys.Designer.cs">
+      <DependentUpon>BabyKidsToys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CartManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CartManagement.Designer.cs">
+      <DependentUpon>CartManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checkout.Designer.cs">
+      <DependentUpon>Checkout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteProduct.Designer.cs">
+      <DependentUpon>DeleteProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Discount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Discount.Designer.cs">
+      <DependentUpon>Discount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Electronics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Electronics.Designer.cs">
+      <DependentUpon>Electronics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fashion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fashion.Designer.cs">
+      <DependentUpon>Fashion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="feedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="feedback.Designer.cs">
+      <DependentUpon>feedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form11Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form11Admin.Designer.cs">
+      <DependentUpon>Form11Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form8.Designer.cs">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HealthBeauty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HealthBeauty.Designer.cs">
+      <DependentUpon>HealthBeauty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory.Designer.cs">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs" />
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerDashboard.Designer.cs">
+      <DependentUpon>ManagerDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderConfirmation9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderTracking10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="otpverify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="otpverify.Designer.cs">
+      <DependentUpon>otpverify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductBrowsing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductBrowsing.Designer.cs">
+      <DependentUpon>ProductBrowsing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SIGNUP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SIGNUP.Designer.cs">
+      <DependentUpon>SIGNUP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SportsOutdoors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SportsOutdoors.Designer.cs">
+      <DependentUpon>SportsOutdoors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateProduct.Designer.cs">
+      <DependentUpon>UpdateProduct.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddProduct.resx">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminFeedback.resx">
+      <DependentUpon>AdminFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BabyKidsToys.resx">
+      <DependentUpon>BabyKidsToys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CartManagement.resx">
+      <DependentUpon>CartManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Checkout.resx">
+      <DependentUpon>Checkout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteProduct.resx">
+      <DependentUpon>DeleteProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Discount.resx">
+      <DependentUpon>Discount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Electronics.resx">
+      <DependentUpon>Electronics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fashion.resx">
+      <DependentUpon>Fashion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="feedback.resx">
+      <DependentUpon>feedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form11Admin.resx">
+      <DependentUpon>Form11Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form8.resx">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HealthBeauty.resx">
+      <DependentUpon>HealthBeauty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory.resx">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderConfirmation9.resx">
+      <DependentUpon>OrderConfirmation9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderTracking10.resx">
+      <DependentUpon>OrderTracking10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="otpverify.resx">
+      <DependentUpon>otpverify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductBrowsing.resx">
+      <DependentUpon>ProductBrowsing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SIGNUP.resx">
+      <DependentUpon>SIGNUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SportsOutdoors.resx">
+      <DependentUpon>SportsOutdoors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateProduct.resx">
+      <DependentUpon>UpdateProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oracle.ManagedDataAccess.Client.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="3b870cb043c7f8a9741cbf66329e294e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="orange-search-icon-button-free-png-701751694974782ivlbouhgd8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shoesale.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="901c30709ad449bec54188031f0662ad.jpg_170x170q80.jpg" />
+    <None Include="DOGSPETS.jpg" />
+    <None Include="JACKETS.jpg" />
+    <Content Include="kids-clothes-sale-banner-template-children-shop-vector-43412358.jpg" />
+    <Content Include="kids.jpg" />
+    <None Include="MOBILE.png" />
+    <None Include="Resources\Login form image.png" />
+    <None Include="Resources\Login form image1.png" />
+    <None Include="Resources\signup image.PNG" />
+    <None Include="Resources\Background.jpeg" />
+    <None Include="Resources\Electronic.jpg" />
+    <None Include="Resources\Fashion.jpg" />
+    <None Include="Resources\health1.jpg" />
+    <None Include="Resources\Baby and Kids Toys.jpg" />
+    <None Include="Resources\beauty acsessary.jpg" />
+    <None Include="Resources\beauty acsessary1.jpg" />
+    <None Include="Resources\Home and Living.jpg" />
+    <None Include="Resources\cloth.jpg" />
+    <None Include="Resources\toys.jpg" />
+    <None Include="Resources\Health.jpg" />
+    <None Include="Resources\Haier Invertor AC_11zon.jpg" />
+    <None Include="Resources\Washing Machine_11zon.jpg" />
+    <None Include="Resources\Refrigerator_11zon.jpg" />
+    <None Include="Resources\Haier LED_11zon.jpg" />
+    <None Include="Resources\Electronic Water Heater_11zon.jpg" />
+    <None Include="Resources\USB Wifi Adaptor_11zon.jpg" />
+    <None Include="Resources\A9 Airpod_11zon.jpg" />
+    <None Include="Resources\TripodStand_11zon.jpg" />
+    <None Include="Resources\TrackSuit_11zon.jpg" />
+    <None Include="Resources\Full Seelvees T-Shirt_11zon.jpg" />
+    <None Include="Resources\Sport Shoes_11zon.jpg" />
+    <None Include="Resources\Shawl for Men_11zon.jpg" />
+    <None Include="Resources\Turtleneck Sweaters_11zon.jpg" />
+    <None Include="Resources\Mini Bags for Girls_11zon.jpg" />
+    <None Include="Resources\Fashion Caps_11zon.jpg" />
+    <None Include="Resources\Fashionable Glasses_11zon.jpg" />
+    <None Include="Resources\Digital Blood Pressure Monitor_11zon.jpg" />
+    <None Include="Resources\FT 15 Thermometer_11zon.jpg" />
+    <None Include="Resources\Digital Weighting Scale_11zon.jpg" />
+    <None Include="Resources\K95 Protective MASK_11zon.jpg" />
+    <None Include="Resources\Makup Brush set_11zon.jpg" />
+    <None Include="Resources\Cleaning kit For Teeth_11zon.jpg" />
+    <None Include="Resources\Whitening FaceWash_11zon.jpg" />
+    <None Include="Resources\Rechargeable Shaving Machine_11zon.jpg" />
+    <None Include="Resources\Winter Cloth Baby_11zon.jpg" />
+    <None Include="Resources\Baby Feeding Bottle_11zon.jpg" />
+    <None Include="Resources\Baby Stroller_11zon.jpg" />
+    <None Include="Resources\Universal Waterproof Pram_11zon.jpg" />
+    <None Include="Resources\Mornaga Milk Powder_11zon.jpg" />
+    <None Include="Resources\Nestle Nido_11zon.jpg" />
+    <None Include="Resources\Bubble Machine_11zon.jpg" />
+    <None Include="Resources\Baby Educational Toy_11zon.jpg" />
+    <None Include="Resources\Football Shin Pad_11zon.jpg" />
+    <None Include="Resources\HandGrip Strength Trainer_11zon.jpg" />
+    <None Include="Resources\HandGrip_11zon.jpg" />
+    <None Include="Resources\Badminton Set_11zon.jpg" />
+    <None Include="Resources\Badminton Set_11zon1.jpg" />
+    <None Include="Resources\Fitness Activity Tracker_11zon.jpg" />
+    <None Include="Resources\Camping HeadLamp_11zon.jpg" />
+    <None Include="Resources\Weight Gainer Capsules_11zon.jpg" />
+    <None Include="Resources\Elbow Brace Sleeves_11zon.jpg" />
+    <None Include="Resources\Baseball Net Caps_11zon.jpg" />
+    <None Include="Resources\Capture.PNG" />
+    <None Include="Resources\Picsart_24-11-24_20-40-50-126.jpg" />
+    <None Include="Resources\file %285%29.png" />
+    <None Include="Resources\shopping-bag-cart_23-2148879372.jpg" />
+    <None Include="Resources\Daraz.jpg" />
+    <None Include="Resources\shopping-bag-cart_23-21488793721.jpg" />
+    <Content Include="shoe-sale-banner-vector.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
